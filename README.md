@@ -13,7 +13,7 @@ A simple Java-based inventory management system for books, built with a Swing-ba
 
 4- Update Book: Modify details of an existing book.
 
-5- Delete Book: Remove a book from the inventory.
+5- Export CSV: Download all the books from the inventory.
 
 6- User-Friendly Interface: Intuitive Swing-based GUI.
 
@@ -26,6 +26,31 @@ GUI Framework: Java Swing
 
 Database: MySQL
 
-Pattern: DAO (Data Access Object) for database interactions & JDBC for connection
-
 IDE:  Eclipse 
+
+Architecture: MVC (Model-View-Controller)
+
+**Design Decisions** 
+
+*Layered Architecture:*
+The system was designed with a three-layered architecture, separating:
+
+Frontend (Presentation Layer): Handles the user interface using Java Swing.
+
+Business Logic (Logic Layer): Implements CRUD methods and SQL operations.
+
+Database (Data Layer): Stores book details persistently in a MySQL database.
+Frontend Design:
+
+*Business Logic:*
+
+CRUD (Create, Read, Update, Delete) operations were implemented in the BookDAOImplementation class to handle all data manipulation tasks.
+SQL operations were used to interact with the database efficiently.
+
+*Database Design:*
+
+A MySQL database with a Books table was designed to store book details such as Title, Author, Genre, Publication Date, and ISBN.
+
+*Database Interaction:*
+
+JDBC (Java Database Connectivity) was used for interacting with the MySQL database. This approach ensures robust and secure communication between the application and the database
